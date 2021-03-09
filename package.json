@@ -1,7 +1,7 @@
 {
   "name": "ninji-gulp-template-2020",
   "version": "1.0.0",
-  "description": "",
+  "description": "my new template for frontend development in 2021 (gulp 4, webpack, sass, eslint, gulp template imports, BEM components)",
   "main": "gulpfile.js",
   "dependencies": {
     "modern-normalize": "^0.6.0"
