@@ -2,7 +2,7 @@
 
 my new template for frontend development in 2021 (gulp 4, webpack, sass, eslint, BEM blocks/components)
 
-Planning to add more info about work of this template next time
+Steps to start developing your new project with this template:
 <br>
 clone project - <code>git clone https://github.com/BlackFxTalon/NinJi-gulp-template-2021</code>
 <br>
