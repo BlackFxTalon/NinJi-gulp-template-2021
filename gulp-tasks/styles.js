@@ -30,14 +30,15 @@ gulp.task("styles", () => {
                 autoprefixer({
                     cascade: false,
                     grid: true,
-                })
-            )
+                }),
+            ),
         )
         .pipe(
             gulpif(
                 production,
                 mincss({
-                    compatibility: "ie8",
+                    // for ie
+                    // compatibility: "ie8",
                     level: {
                         1: {
                             specialComments: 0,
@@ -53,8 +54,8 @@ gulp.task("styles", () => {
                             removeUnusedAtRules: false,
                         },
                     },
-                })
-            )
+                }),
+            ),
         )
         .pipe(gulp.dest(paths.styles.dist))
         .pipe(
@@ -62,8 +63,8 @@ gulp.task("styles", () => {
                 production,
                 rename({
                     suffix: ".min",
-                })
-            )
+                }),
+            ),
         )
         .pipe(plumber.stop())
         .pipe(gulpif(!production, sourcemaps.write("./maps/")))
@@ -71,7 +72,7 @@ gulp.task("styles", () => {
         .pipe(
             debug({
                 title: "CSS files",
-            })
+            }),
         )
         .on("end", browsersync.reload);
 });
