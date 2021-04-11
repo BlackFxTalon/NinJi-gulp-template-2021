@@ -18,7 +18,7 @@ const requireDir = require("require-dir"),
             ],
         },
         scripts: {
-            src: "./src/js/index.js",
+            src: "./src/js/main.js",
             dist: "./build/js/",
             watch: ["./src/blocks/**/*.js", "./src/js/**/*.js"],
         },
@@ -62,7 +62,7 @@ export const development = gulp.series(
         "fonts",
         "favicons",
     ]),
-    gulp.parallel("serve")
+    gulp.parallel("serve"),
 );
 
 export const prod = gulp.series(
@@ -76,7 +76,7 @@ export const prod = gulp.series(
         "sprites",
         "fonts",
         "favicons",
-    ])
+    ]),
 );
 
 export default development;

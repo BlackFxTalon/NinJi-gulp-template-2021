@@ -14,16 +14,16 @@ const argv = yargs.argv,
 
 gulp.task("html", () => {
     return gulp
-        .src(paths.views.src)
+        .src(paths.html.src)
         .pipe(
             include({
                 prefix: "@@",
                 basepath: "@file",
-            })
+            }),
         )
         .pipe(gulpif(production, replace(".css", ".min.css")))
         .pipe(gulpif(production, replace(".js", ".min.js")))
         .pipe(htmlValidator())
-        .pipe(gulp.dest(paths.views.dist))
+        .pipe(gulp.dest(paths.html.dist))
         .pipe(browsersync.stream());
 });

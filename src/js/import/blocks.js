@@ -1,3 +1,3 @@
-import "./blocks/header/header";
+import "%modules%/header/header";
 
-import "./blocks/footer/footer";
+import "%modules%/footer/footer";

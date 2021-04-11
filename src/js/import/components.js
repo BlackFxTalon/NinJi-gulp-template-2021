@@ -1,1 +1,1 @@
-import "./blocks/components/button/button";
+import "%components%/button/button";
